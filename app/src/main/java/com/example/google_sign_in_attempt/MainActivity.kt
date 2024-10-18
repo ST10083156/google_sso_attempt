@@ -3,6 +3,7 @@ package com.example.google_sign_in_attempt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.google_sign_in_attempt.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -26,8 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         gso = GoogleSignInOptions
             .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("126804112970-tv50779stfmp3oaqj9sah18bdi180v7d.apps.googleusercontent.com")
             .requestEmail()
             .build()
+
 
         gsc = GoogleSignIn.getClient(this,gso)
 
@@ -44,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(resultCode==1000){
+        if(requestCode==1000){
             var task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
 
             try{
@@ -53,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             }
             catch(e : ApiException){
                 Toast.makeText(this,e.message,Toast.LENGTH_LONG).show()
+                Log.d("MainActivity", "ResultCode: $resultCode, Data: $data")
+
             }
         }
     }

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "126804112970-lptd1ujrtsjnvqui8vjp4ap6j4tcjjtp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.google_sign_in_attempt",
+            "certificate_hash": "fbbf50937ff625dbd3f74eb6badc6c271aa4ea88"
+          }
+        },
+        {
           "client_id": "126804112970-tv50779stfmp3oaqj9sah18bdi180v7d.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -77,6 +85,14 @@
           "android_info": {
             "package_name": "com.example.quizcore_part_2",
             "certificate_hash": "dd1f94f0f08ffa38597c87616fda9d3da7b34151"
+          }
+        },
+        {
+          "client_id": "126804112970-u1hog6091rdac7e5f95jh8tge168h9vi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quizcore_part_2",
+            "certificate_hash": "fbbf50937ff625dbd3f74eb6badc6c271aa4ea88"
           }
         },
         {
